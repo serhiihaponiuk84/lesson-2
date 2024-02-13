@@ -19,6 +19,7 @@ num1 = float(input("Введіть перше число: "))
 num2 = float(input("Введіть друге число: "))
 num3 = float(input("Введіть третє число: "))
 
+
 # Константи для конвертації
 METERS_IN_MILE = 1609.34
 METERS_IN_INCH = 0.0254
