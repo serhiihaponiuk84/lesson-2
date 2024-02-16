@@ -49,3 +49,34 @@ except Exception:
     print("Некорректне введення.")
 finally:
     print("The program completed.")
+
+# 3.
+print("Калькулятор")
+print("Користувач вводить два числа та матем дію: + - * або / Залежно від введеної матем дії вивести результат")
+
+class ExceptionAction(Exception):
+  pass
+
+try:
+    number1 = float(input("Введіть перше число: "))
+    number2 = float(input("Введіть друге число: "))
+    action = input("Введіть дію (лише + - * або /): ")
+    match action:
+        case "+":
+            result = number1 + number2
+        case "-":
+            result = number1 - number2
+        case "*":
+            result = number1 * number2
+        case "/":
+            result = number1 / number2
+        case _:
+            raise ExceptionAction("Некорректне введення. Немає такої математичної операції.")
+    print(f"Результат: {result}")
+
+except ExceptionAction as error:
+    print(error)
+except Exception:
+    print("Некорректне введення.")
+finally:
+    print("The program completed.")
