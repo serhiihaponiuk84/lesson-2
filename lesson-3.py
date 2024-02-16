@@ -6,3 +6,27 @@
 
 Проект завантажити на гітхаб і надіслати посилання на public репозиторій (всі інші дз здавати так само)
 '''
+
+print("Програма відобразить на екран назву введенного дня тижня.")
+try:
+    day = int(input("Вводіть із клавіатури номер дня тижня (1-7): "))
+    match day:
+        case 1:
+            print("Це понеділок. It's Monday.")
+        case 2:
+            print("Це вівторок. It's Tuesday.")
+        case 3:
+            print("Це середа. It's Wednesday.")
+        case 4:
+            print("Це четвер. It's Thursday.")
+        case 5:
+            print("Це п'ятниця. It's Friday.")
+        case 6:
+            print("Це субота. It's Saturday.")
+        case 7:
+            print("Це неділя. It's Sunday.")
+        case _:
+            print("Некорректне введення. В тижні 7 днів.")
+
+except Exception:
+    print("Некорректне введення.")
