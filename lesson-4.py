@@ -22,6 +22,7 @@
 '''
 
 # 1.
+print("Перше завдання.")
 # Запитуємо у користувача рядок
 print("Програма порахує кількість літер, цифр у введеному рядку та виведе обидві кількості на екран.")
 text = input("Введіть рядок з клавіатури: ")
@@ -42,8 +43,10 @@ print(f"Введено рядок: {text}")
 print(f"Довжина рядка: {len(text)}")
 print(f"Кількість літер: {letters}")
 print(f"Кількість цифр: {digits}")
+print()
 
 # 2.
+print("Друге завдання.")
 print("Програма порахує скільки разів у введеному рядку зустрічається потрібний символ для пошуку. Отримане число буде відображено на екран.")
 
 # Запитуємо у користувача рядок
@@ -58,8 +61,10 @@ count = text.count(search_char)
 # Виведення результату
 print(f"Введено рядок: {text}")
 print(f"Символ '{search_char}' зустрічається в рядку {count} разів.")
+print()
 
 # 3.
+print("Третє завдання.")
 print("Введіть з клавіатури рядок, слово для пошуку, слово для заміни.")
 print("Програма зробить у рядку заміну одного слова на інше. Отриманий рядок відобразиться на екрані.")
 print("Це приклад рядку: Це приклад тексту, де потрібно замінити слово.")
@@ -81,8 +86,10 @@ print(f"Слово для пошуку: {search_word}")
 print(f"Слово для заміни: {replace_word}")
 print("Рядок після заміни:")
 print(modified_text)
+print()
 
 # 4.
+print("Четверте завдання.")
 print("Програма робить зрізи по технічному завданню.")
 
 # Припустимо, що рядок заданий наступним чином:
@@ -98,8 +105,10 @@ print("Символи з непарними індексами:", text[1::2])
 print("Символи у зворотному порядку:", text[::-1])
 print("Символи через один у зворотному порядку, починаючи з останнього:", text[::-2])
 print("Довжина рядка:", len(text))
+print()
 
 # 5.
+print("П'яте завдання (додаткове).")
 # Приклад тексту
 text = "це приклад тексту. він містить цифри 12345. також він містить різні розділові знаки, включаючи крапки, коми та знаки оклику.!!"
 print(f"Є певний текст: {text}")
@@ -123,3 +132,282 @@ print(capitalized_text)
 print("Кількість цифр у тексті:", digits_count)
 print("Кількість розділових знаків у тексті:", punctuation_count)
 print("Кількість знаків оклику в тексті:", exclamation_marks_count)
+print()
+
+# 6.
+print("Шосте завдання (додаткове).")
+star = "* "
+whitespaces = "  "
+border = "- "
+
+print("а)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count - 1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        print(border, end="")
+        whitespaces_count += 1
+        stars_count -= 1
+    print()
+print()
+
+print("б)")
+stars_count= 1
+whitespaces_count = 4
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        print(border, end="")
+        whitespaces_count -= 1
+        stars_count += 1
+    print()
+print()
+
+print("в)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        if stars_count > 0:
+            stars_count -= 2
+            whitespaces_count += 1
+        for j in range(whitespaces_count - 1):
+            print(whitespaces, end="")
+        print(border, end="")
+    print()
+print()
+
+# производная из варианта "д"
+print("г)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            if i < 3:
+                print(whitespaces, end="")
+            else:
+                print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        print(border, end="")
+        if i < border_count // 2:
+            stars_count -= 2
+            whitespaces_count += 1
+        else:
+            stars_count += 2
+            whitespaces_count -= 1
+    print()
+print()
+
+# производная из варианта "д"
+print("г)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            if i > 2:
+                print(star, end="")
+            else:
+                print(whitespaces, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        print(border, end="")
+        if i < border_count // 2:
+            stars_count -= 2
+            whitespaces_count += 1
+        else:
+            stars_count += 2
+            whitespaces_count -= 1
+    print()
+print()
+
+print("д)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        print(border, end="")
+        if i < border_count // 2:
+            stars_count -= 2
+            whitespaces_count += 1
+        else:
+            stars_count += 2
+            whitespaces_count -= 1
+    print()
+print()
+
+print("е)")
+stars_count = 1
+whitespaces_count = 3
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            if j < (border_count // 2 - 1):
+                print(star, end="")
+        print(border, end="")
+        if (i < border_count // 2):
+            stars_count += 1
+            whitespaces_count -= 2
+        else:
+            stars_count -= 1
+            whitespaces_count += 2
+    print()
+print()
+
+# производная из варианта "е"
+print("ж)")
+stars_count = 1
+whitespaces_count = 3
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            if j < (border_count // 2 - 1):
+                print(whitespaces, end="")
+        print(border, end="")
+        if (i < border_count // 2):
+            stars_count += 1
+            whitespaces_count -= 2
+        else:
+            stars_count -= 1
+            whitespaces_count += 2
+    print()
+print()
+
+# производная из варианта "е"
+print("з)")
+stars_count = 1
+whitespaces_count = 3
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(stars_count):
+            if j < (border_count // 2 - 1):
+                print(whitespaces, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+                print(star, end="")
+        print(border, end="")
+        if (i < border_count // 2):
+            stars_count += 1
+            whitespaces_count -= 2
+        else:
+            stars_count -= 1
+            whitespaces_count += 2
+    print()
+print()
+
+print("и)")
+stars_count = 5
+whitespaces_count = 0
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count - 1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        print(border, end="")
+        whitespaces_count += 1
+        stars_count -= 1
+    print()
+print()
+
+print("к)")
+stars_count = 1
+whitespaces_count = 4
+border_count = 7
+for i in range(border_count):
+    if i == 0 or i == border_count -1:
+        for j in range(border_count):
+            print(border, end="")
+    else:
+        print(border, end="")
+        for j in range(whitespaces_count):
+            print(whitespaces, end="")
+        for j in range(stars_count):
+            print(star, end="")
+        print(border, end="")
+        whitespaces_count -= 1
+        stars_count += 1
+    print()
+print()
