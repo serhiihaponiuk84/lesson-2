@@ -1,22 +1,23 @@
 star = "* "
 whitespaces = "  "
 border = "- "
+side = "| "
 
 print("а)")
-stars_count = 5
+stars_count = 8
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count - 1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
             print(star, end="")
-        print(border, end="")
+        print(side, end="")
         whitespaces_count += 1
         stars_count -= 1
     print()
@@ -24,34 +25,34 @@ print()
 
 print("б)")
 stars_count= 1
-whitespaces_count = 4
-border_count = 7
+whitespaces_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(stars_count):
             print(star, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         whitespaces_count -= 1
         stars_count += 1
     print()
 print()
 
 print("в)")
-stars_count = 5
+stars_count = 9
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
@@ -61,31 +62,31 @@ for i in range(border_count):
             whitespaces_count += 1
         for j in range(whitespaces_count - 1):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
     print()
 print()
 
 # производная из варианта "д"
 print("г)")
-stars_count = 5
+stars_count = 9
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
-            if i < 3:
+            if i < border_count // 2:
                 print(whitespaces, end="")
             else:
                 print(star, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         if i < border_count // 2:
             stars_count -= 2
             whitespaces_count += 1
@@ -97,25 +98,25 @@ print()
 
 # производная из варианта "д"
 print("г)")
-stars_count = 5
+stars_count = 9
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
-            if i > 2:
+            if i >= border_count // 2:
                 print(star, end="")
             else:
                 print(whitespaces, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         if i < border_count // 2:
             stars_count -= 2
             whitespaces_count += 1
@@ -126,22 +127,22 @@ for i in range(border_count):
 print()
 
 print("д)")
-stars_count = 5
+stars_count = 9
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
             print(star, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         if i < border_count // 2:
             stars_count -= 2
             whitespaces_count += 1
@@ -153,14 +154,14 @@ print()
 
 print("е)")
 stars_count = 1
-whitespaces_count = 3
-border_count = 7
+whitespaces_count = 7
+border_count = 11
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(stars_count):
             print(star, end="")
         for j in range(whitespaces_count):
@@ -168,7 +169,7 @@ for i in range(border_count):
         for j in range(stars_count):
             if j < (border_count // 2 - 1):
                 print(star, end="")
-        print(border, end="")
+        print(side, end="")
         if (i < border_count // 2):
             stars_count += 1
             whitespaces_count -= 2
@@ -181,14 +182,14 @@ print()
 # производная из варианта "е"
 print("ж)")
 stars_count = 1
-whitespaces_count = 3
-border_count = 7
+whitespaces_count = 7
+border_count = 11
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(stars_count):
             print(star, end="")
         for j in range(whitespaces_count):
@@ -196,7 +197,7 @@ for i in range(border_count):
         for j in range(stars_count):
             if j < (border_count // 2 - 1):
                 print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         if (i < border_count // 2):
             stars_count += 1
             whitespaces_count -= 2
@@ -209,14 +210,14 @@ print()
 # производная из варианта "е"
 print("з)")
 stars_count = 1
-whitespaces_count = 3
-border_count = 7
+whitespaces_count = 7
+border_count = 11
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(stars_count):
             if j < (border_count // 2 - 1):
                 print(whitespaces, end="")
@@ -224,7 +225,7 @@ for i in range(border_count):
             print(whitespaces, end="")
         for j in range(stars_count):
                 print(star, end="")
-        print(border, end="")
+        print(side, end="")
         if (i < border_count // 2):
             stars_count += 1
             whitespaces_count -= 2
@@ -235,20 +236,20 @@ for i in range(border_count):
 print()
 
 print("и)")
-stars_count = 5
+stars_count = 8
 whitespaces_count = 0
-border_count = 7
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count - 1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(stars_count):
             print(star, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
-        print(border, end="")
+        print(side, end="")
         whitespaces_count += 1
         stars_count -= 1
     print()
@@ -256,19 +257,19 @@ print()
 
 print("к)")
 stars_count = 1
-whitespaces_count = 4
-border_count = 7
+whitespaces_count = 8
+border_count = stars_count + whitespaces_count + 2
 for i in range(border_count):
     if i == 0 or i == border_count -1:
         for j in range(border_count):
             print(border, end="")
     else:
-        print(border, end="")
+        print(side, end="")
         for j in range(whitespaces_count):
             print(whitespaces, end="")
         for j in range(stars_count):
             print(star, end="")
-        print(border, end="")
+        print(side, end="")
         whitespaces_count -= 1
         stars_count += 1
     print()
