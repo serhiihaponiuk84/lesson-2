@@ -28,9 +28,8 @@ ARRAY_NUMBERS = 10
 numbers = [random.randint(-5, 5) for _ in range(ARRAY_NUMBERS)]
 print("Список чисел:", numbers)
 print("Програма прибере дублікати значень в списку та виведе на екран унікальні значення.")
-numbers = set(numbers)
-numbers = list(numbers)
-print("Унікальні значення зі списку:", numbers)
+unique_numbers = list(set(numbers))
+print("Унікальні значення зі списку:", unique_numbers)
 print()
 
 # 2.
