@@ -229,3 +229,91 @@ result = raise_elements_to_powers(test_list, degree)
 print("Модифікований список:")
 print(result)
 print()
+
+# 7 (Додаткове завдання).
+# добавить:
+# - ограничение на кол-во попыток, если не уложились в кол-во - проиграли
+# - два уровня сложности
+# -- легкий уровень: кол-во попыток равно длина слова * 2 -> если не угадал - вывести сообщение об этом
+# -- сложный уровень: кол-во попыток равно длина слова * 1.5 -> если не угадал - вывести сообщение об этом
+# -- показывать сколько попыток осталось
+# - обработку исключений
+words = ["Cat", "Apple", "Dog", "Letter", "Helicopter"]
+
+secret_word = random.choice(words)
+secret_symbol = "_"
+user_word = [secret_symbol] * len(secret_word)
+attempts_counter = 0
+difficulty = None
+
+while difficulty == None:
+    print("Select difficulty level:")
+    print("0 - easy level")
+    print("1 - difficult level")
+    level = input("Input Level: ")
+    match level:
+        case "0":
+            difficulty = False
+        case "1":
+            difficulty = True
+        case _:
+            print("Input Error! Enter the correct difficulty level!")
+
+if difficulty:
+    difficulty_coefficient = 1.5
+else:
+    difficulty_coefficient = 2
+
+max_attempts = int(len(secret_word) * difficulty_coefficient + 1)
+
+while max_attempts > 0:
+
+    if "".join(user_word).find(secret_symbol) == -1:
+        print(f"\nYou guessed the word {secret_word}!\nAttempts: {attempts_counter}\nRemaining number of attempts: "
+              f"{max_attempts}.")
+        break
+
+    print(" ".join(user_word), end = "")
+    print(f" Remaining number of attempts: {max_attempts}.")
+
+    letter = input("Enter a letter: ").strip().lower()
+
+    if not letter.isalpha() or len(letter) != 1:
+        print("Please enter only one letter!")
+        continue
+
+    attempts_counter += 1
+    max_attempts -=1
+
+    for i in range(len(secret_word)):
+        if letter == secret_word[i].lower():
+            user_word[i] = letter
+else:
+    print("\nUnfortunately, you did not guess the hidden word. :( You'll definitely have better luck next time. Practice!")
+
+# 8 (Додаткове завдання).
+import string
+
+PASSWORD_DATA = string.ascii_letters + string.digits + string.punctuation
+MIN_PASSWORD_LENGTH = 5
+MAX_PASSWORD_LENGTH = 20
+
+print("The program generates a password of the specified length.")
+
+def generate_password(password_length: int, initial_password_data: str) -> str:
+    if password_length < MIN_PASSWORD_LENGTH or password_length > MAX_PASSWORD_LENGTH:
+        raise Exception(f"Provided password length must be between {MIN_PASSWORD_LENGTH} and {MAX_PASSWORD_LENGTH}")
+    password = ""
+    for _ in range(password_length):
+        password += random.choice(initial_password_data)
+    return password
+
+
+new_password = ""
+while not new_password:
+    try:
+        new_password = generate_password(int(input(f"Enter the desired password length from {MIN_PASSWORD_LENGTH} to "
+                                               f"{MAX_PASSWORD_LENGTH}: ")), PASSWORD_DATA)
+        print(f"New password: {new_password}")
+    except Exception as error:
+        print(error)
