@@ -226,7 +226,7 @@ while True:
 
 # Заміна стовпів місцями
 for i in range(10):
-    matrix[i][column_index_1 - 1], matrix[i][column_index_2 - 1] = matrix[i][column_index_2 - 1], matrix[i][column_index_1 - 1]
+    matrix[i][column_index_1 - 1], matrix[i][cxolumn_index_2 - 1] = matrix[i][column_index_2 - 1], matrix[i][column_index_1 - 1]
 
 print(f"Матриця після зміни стовпців {column_index_1} та {column_index_2} місцями:")
 for row in matrix:
