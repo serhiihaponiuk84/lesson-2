@@ -202,8 +202,7 @@
 #
 # # pop([index]): видаляє та повертає елемент за індексом index.
 # # Якщо індекс не передано, просто видаляє останній елемент.
-#
-# result = numbers.pop(0)
+#result = numbers.pop(0)
 # print(result)
 # print(numbers)
 # # #
