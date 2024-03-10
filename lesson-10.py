@@ -22,7 +22,7 @@ def generate_password(length:int=MIN_SIZE_PASSWORD) -> str:
     - мінімум одна маленька літера
     - мінімум одна цифра
     - мінімум один символ
-    - загальна довжина пароля - від 8 до 16 символів (за замовчуванням 12)
+    - загальна довжина пароля - від 8 до 16 символів (за замовчуванням 8)
     """
     if not (MIN_SIZE_PASSWORD <= length <= MAX_SIZE_PASSWORD):
         raise ValueError(f"Довжина пароля повинна бути від {MIN_SIZE_PASSWORD} до {MAX_SIZE_PASSWORD} символів")
