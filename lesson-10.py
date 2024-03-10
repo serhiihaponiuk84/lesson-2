@@ -15,7 +15,7 @@ import string
 MIN_SIZE_PASSWORD = 8
 MAX_SIZE_PASSWORD = 16
 
-def generate_password(length:int=12) -> str:
+def generate_password(length:int=MIN_SIZE_PASSWORD) -> str:
     """
     Генерує пароль, який відповідає наступним вимогам:
     - мінімум одна велика літера
@@ -54,7 +54,7 @@ def generate_password(length:int=12) -> str:
 
 def validation(pattern:str, expression:str) -> bool:
     return bool(re.match(pattern, expression))
-    # Повертає True, якщо номер відповідає шаблону, інакше - False
+    # Повертає True, якщо вираз відповідає шаблону, інакше - False
 
 
 # 1.
@@ -139,7 +139,7 @@ pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16
 #цифру, спеціальний символ і матиме довжину від 8 до 16 символів.
 print(f"5. Password (minimum: one capital letter, one small letter, one number, one symbol, password length -"
       f" from {MIN_SIZE_PASSWORD} to {MAX_SIZE_PASSWORD} characters). Example for password:"
-      f" {generate_password(MIN_SIZE_PASSWORD)}")
+      f" {generate_password()}")
 while not validation(pattern, expression):
     expression = input("Enter your home password to verify: ")
     if MIN_SIZE_PASSWORD <= len(expression) <= MAX_SIZE_PASSWORD:
